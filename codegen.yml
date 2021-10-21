@@ -1,0 +1,12 @@
+overwrite: true
+schema: "schema/schema.graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/graphql/index.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+  src/graphql/fragments.tsx:
+    plugins:
+      - fragment-matcher
